@@ -13,23 +13,43 @@ This is the backend for FlowFusion’s AI-powered customer support bot. It uses 
 
 ##  Setup Instructions
 
+## ⚙️ Setup Instructions
+
 1. Clone the repository:
 
-bash
-git clone https://github.com/your-username/flowfusion-support-bot.git
-cd flowfusion-support-bot
+    ```bash
+    git clone https://github.com/your-username/flowfusion-support-bot.git
+    cd flowfusion-support-bot
+    ```
 
-2. Create virtual environment and install dependencies:
-python -m venv .venv
-source .venv/bin/activate     # For Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+2. Create a virtual environment and install dependencies:
 
-3. Add your Hugging Face API key in a .env file:
-HUGGINGFACEHUB_API_TOKEN=your_token_here
+    ```bash
+    python -m venv .venv
+    # Activate the virtual environment:
+    # On macOS/Linux:
+    source .venv/bin/activate
+    # On Windows:
+    .venv\Scripts\activate
 
-4. Run fastAPI
-cd backend
-uvicorn main:app --reload
+    pip install -r requirements.txt
+    ```
+
+3. Add your Hugging Face API key in a `.env` file in the root directory:
+
+    ```env
+    HUGGINGFACEHUB_API_TOKEN=your_token_here
+    ```
+
+4. Run the FastAPI server:
+
+    ```bash
+    cd backend
+    uvicorn main:app --reload
+    ```
+
+5. Open your browser and go to:  
+    [http://localhost:8000/docs](http://localhost:8000/docs) to interact with the API.
 
 ## System Architecture
     FastAPI backend
